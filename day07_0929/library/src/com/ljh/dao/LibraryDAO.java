@@ -57,7 +57,7 @@ public class LibraryDAO {
                 FROM Rental r JOIN Book b ON r.BookID = b.BookID
                 WHERE r.ReturnDate IS NULL
                 ORDER BY r.RentDate
-                """;
+                """; 
         try (Connection c = DBConnection.get();
              PreparedStatement ps = c.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
